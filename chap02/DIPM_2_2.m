@@ -1,0 +1,19 @@
+%DIPM 2.2, 2.3
+
+close all;
+clear;
+
+f = imread("chest-xray.tif");
+
+size(f);
+
+[M, N, K] = size(f);
+
+whos f;
+
+figure, imshow(f);
+f_min = min(f, [], "all");
+f_max = max(f, [], "all");
+fprintf("min = %d, max = %d\n", f_min, f_max);
+figure, imshow(f, []);          % strech the gray value to 0~255
+figure, imshow(f, [40, 58]);    % show only pixels which gray scale is between 40~58
