@@ -1,0 +1,12 @@
+close all;
+clear;
+
+img = imread("barcode_01.jpg");
+
+
+img2 = imadjust(img, [], [], 0.25);
+
+figure(1);
+imshow(img);
+figure(2);
+imshow(img2);

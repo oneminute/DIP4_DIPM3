@@ -1,0 +1,11 @@
+close all;
+clear;
+
+img1 = imread("circuitboard-saltandpep.tif");
+
+img1_f = medfilt2(img1);
+
+figure(1);
+imshow(img1);
+figure(2);
+imshow(img1_f);

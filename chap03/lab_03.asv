@@ -1,0 +1,22 @@
+close all;
+clear;
+
+f = imread("currency$100.tif");
+
+fbp6 = bitand(f, 0b00100000);
+fbp7 = bitand(f, 0b01000000);
+fbp8 = bitand(f, 0b10000000);
+
+figure(1);
+imshow(f);
+
+figure(6);
+imshow(fbp6);
+
+figure(7);
+imshow(fbp7);
+
+figure(8);
+imshow(fbp8);
+
+
